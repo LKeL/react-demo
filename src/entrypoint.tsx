@@ -28,6 +28,4 @@ if ($$webpack_dev && (module as HMRModule).hot) {
 }
 
 import { Greeting } from './components/demo';
-document.body.insertBefore(document.createElement("div"), document.body.firstElementChild);
-
-ReactDOM.render(<Greeting name="heartblood" />, document.body.firstElementChild);
+ReactDOM.render(<Greeting name="heartblood" />, document.getElementById('app'));
