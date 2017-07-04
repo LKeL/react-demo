@@ -13,16 +13,14 @@
     "test:watch": "   npm run build && jest --forceExit --watch",
     "tslint": "    tslint -c tslint.json       'src/**/*.ts?(x)'",
     "tslint:fix": "tslint -c tslint.json --fix 'src/**/*.ts?(x)'",
-
-    "dev-server": "  webpack-dev-server --config webpack/webpack.dev.js --devtool eval --progress --colors --content-base dev",
-    "webpack": "     webpack  --watch   --config webpack/webpack.dev.js",
-    "webpack:prod": "webpack            --config webpack/webpack.prod.js"
+    "dev": "  webpack --progress --colors --config webpack/webpack.dll.js &&  webpack-dev-server --config webpack/webpack.dev.js --devtool eval --progress --colors --content-base dev",
+    "webpack": "  webpack  --watch   --config webpack/webpack.dev.js",
+    "webpack:prod": "webpack            --config webpack/webpack.prod.js",
+    "doc": " rm -rf lib/* && tsc && gulp doc"
   },
   "author": "heartblood",
   "license": "ISC",
   "dependencies": {
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
     "tslib": "^1.7.1"
   },
   "devDependencies": {
@@ -36,11 +34,17 @@
     "extract-text-webpack-plugin": "^2.1.2",
     "file-loader": "^0.11.2",
     "gulp": "^3.9.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-jsdoc3": "^1.0.1",
+    "html-webpack-plugin": "^2.29.0",
     "less": "^2.7.2",
     "less-loader": "^4.0.4",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
     "style-loader": "^0.18.2",
     "tslint": "^5.4.3",
     "typescript": "^2.3.4",
+    "unfetch": "^3.0.0",
     "url-loader": "^0.5.9",
     "webpack": "^2.6.1",
     "webpack-dev-server": "^2.5.0",

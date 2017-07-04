@@ -47,6 +47,5 @@ module.exports = {
             filename: 'app.css',
             allChunks: true
         })
-    ],
-    devtool: "source-map"
+    ]
 };
