@@ -5,10 +5,10 @@
         "##module": "webpack 2 already supports ES6 import, just use it"
     },
     "compilerOptions": {
-        "target": "es6",
+        "target": "es5",
         "noImplicitAny": true,
         "experimentalDecorators": true,
-        "sourceMap": false,
+        "sourceMap": true,
         "moduleResolution": "node",
         "listEmittedFiles": false,
         "emitDecoratorMetadata": true,

@@ -15,7 +15,11 @@
         "jsx": "react",
         "pretty": true,
         "module": "commonjs",
-        "importHelpers": true
+        "importHelpers": true,
+        "compilerOptions": {
+            "noImplicitAny": true,
+            "removeComments": true
+        }
     },
     "exclude": [
         "node_modules"
